@@ -75,7 +75,7 @@ runs:
       if: ${{ github.event_name == 'pull_request' && (github.event.action == 'opened' || github.event.action == 'reopened') && inputs.use-app-json == 'false' }}
       shell: bash
       run: |
-        curl -X POST https://api.heroku.com/team/apps \
+        curl -X POST https://api.heroku.com/teams/apps \
         -d '{
         "name": "'"$APP_NAME"'",
         "region": "${{ inputs.region }}",
